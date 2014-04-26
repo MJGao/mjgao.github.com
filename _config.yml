@@ -1,6 +1,7 @@
 markdown: rdiscount
 permalink: /:year/:month/:day/:title/
-url: http://mjgao.github.comauthor: mjgao
+url: http://mjgao.github.com
+author: mjgao
 pygments: true
 safe: true
 paginate: 16
