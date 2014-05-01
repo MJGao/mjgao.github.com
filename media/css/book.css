@@ -1,0 +1,56 @@
+﻿#mybooks {
+   float:left;
+}
+
+#mybooks_list {
+  margin-left:10px;
+width:100px;
+height:180px;
+float:left;
+margin-left:18px;
+margin-top:5px;
+
+}
+
+#mbook {
+ width:100%;
+float:left;
+}
+
+#mbook img {
+ display:block;
+margin-left:16px;
+}
+
+#b_t {
+ font-size:12px;
+float:left;
+text-align:center;
+width:100px;
+margin-top:4px;
+line-height:20px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;  
+}
+
+#b_t  a {
+ float:left;
+width:100px;
+color:#000000;
+}
+
+#b_au {
+ font-size:12px;
+float:left;
+text-align:center;
+width:100px;
+margin-top:4px;
+line-height:20px;
+}
+
+#b_au  a {
+  float:left;
+width:100px;
+color:#000000;
+}

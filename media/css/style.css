@@ -62,6 +62,8 @@ embed,object,iframe{display:block;margin:4px auto;}
 footer{
 display:block;
 border-top: 1px dashed blue;
+width:100%;
+float:left;
 }
 
 footer small {

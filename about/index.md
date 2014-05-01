@@ -21,14 +21,14 @@ comments: no
 >>孙少平
 
 >最喜欢的一本书：
->>《平凡的世界》
+>>《平凡的世界》、《荒原狼》
 
 
 >###联系方式：        
 
 >>个人邮箱: [ecgaoxiang@gmail.com](mailto:ecgaoxiang@gmail.com)     
 >>新浪微博: [高木匠x](http://weibo.com/u/2515822681)	 
->>豆瓣：[MJGao](http://www.douban.com/mjgao)    
+>>豆瓣：[MJGao](http://www.douban.com/people/84894352/)    
 >>github : [MJGao](https://github.com/mjgao)        
 
 ----
