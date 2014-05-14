@@ -163,6 +163,8 @@ tags: [技术,Maven]
 
 3、[Maven_Maven教程](http://www.yiibai.com/maven/)
 
+4、[Juven Xu--Maven博客](http://www.juvenxu.com/)
+
 
 
 
