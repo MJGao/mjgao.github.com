@@ -10,7 +10,7 @@ tags: [javascript]
 
 记录一下javascript的定义“类”的方式。
 
-一些有关javascript的书籍中开篇都提出`函数式一等公民`。javascript中的所谓的类都可以模拟，包括我们所熟知的一系列的`设计模式`，都可以通过javascript来进行模拟构造。
+一些有关javascript的书籍中开篇都提出`函数是一等公民`。javascript中的所谓的类都可以模拟，包括我们所熟知的一系列的`设计模式`，都可以通过javascript来进行模拟构造。
 
 我正常使用的方式定义方式如下：
 
