@@ -21,7 +21,7 @@ tags: [javascript]
 2、定义模板区域。
 
     <script id='template' type='text/ractive'>
-    <p>My name is {{uname}}!</p>
+    <p>My name is {uname}!</p>
     </script>
 
 3、使用js代码进行数据的载入。
@@ -126,9 +126,9 @@ tags: [javascript]
 
     在模板中定义如下：
      <ul>
-      {{#list}}
-      <li>{{this}}</li>
-      {{/list}}
+      {#list}
+      <li>{this}</li>
+      {/list}
      </ul>
 
     var list = ['a','b','c','d'];//这个一定要在之前进行定义,因为有use strict的限制，一
@@ -149,17 +149,17 @@ tags: [javascript]
 首先定义一个模板：
 
      <div class='items'>
-       {{#items}}
-          {{>item}}
-       {{/items}}
+       {#items}
+          {>item}
+       {/items}
      </div>
 
 接着我们来使用这个定义的局部模板：
      
     <li class='item'>
-       <!--{{>item}}-->
-         <span>{{filename}}</span>
-       <!--{{/item}}-->
+       <!--{>item}-->
+         <span>{filename}</span>
+       <!--{/item}-->
     </li>
 
 在data区域中增加数据如下：
@@ -176,6 +176,8 @@ tags: [javascript]
 计划：以下几天去看一下人家这些框架是如何实现的，只有这样才能说明真正搞清楚一个东西。
 
 [测试代码下载](http://mjgao.github.io/assets/download/testreac.rar)
+
+###ps：由于本博客模板解析的问题，所有的单`{}`改为里面再包一个{}
 
 ###参考资料
 
