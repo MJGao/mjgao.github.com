@@ -518,7 +518,106 @@ js方法说明：
 
 看起来就是一个手电筒效果，绘制过程都有相关的解释，感兴趣的可以到官网上或者找相关资料来看，这里我就不说了。
 
-其实HTML5还涉及到很多内容，例如关于像素的操作、图像的操作等等，这里我就不再赘述了，可以去官网上去看一下具体的怎样来做。但是在学习的过程中，我发现，html5中涉及到如何解析你写的东西，包括如何在底层将这些效果渲染出来，我觉得这才是真正学习好一门知识或者语言的思考方式。
+###图像处理(Drawing images to the canvas)
+
+我们想将女神苏菲玛索的照片加载到画布中，代码如下：
+
+    var ctx = document.getElementById("myca").getContext('2d');
+	var image = new Image();
+	image.onload = function(){
+	  ctx.drawImage(image,10,10);
+	
+	}
+	image.src = 'test.jpg';
+
+效果图如下：
+
+<img src="/assets/images/h36.JPG" />
+
+下面我们为图片设定指定宽高，代码如下：
+    
+    var ctx = document.getElementById("myca").getContext('2d');
+	var image = new Image();
+	image.onload = function(){
+	  ctx.drawImage(image,10,10,200,100);
+	
+	}
+	image.src = 'test.jpg';
+
+效果图如下：
+
+<img src="/assets/images/h37.JPG" />
+
+图片操作中还会涉及到相关剪裁操作，代码如下：
+
+    var ctx = document.getElementById("myca").getContext('2d');
+	var image = new Image();
+	image.onload = function(){
+	  ctx.drawImage(image,20,20,300,200,10,10,500,340);
+	
+	}
+	image.src = 'test.jpg';
+
+效果图如下：
+
+<img src="/assets/images/h38.JPG" />
+
+整体感觉就是将图片放大后，再自行进行相应区域的剪裁，效果还是可以。
+
+操作语法为：`drawImage(image,sx,sy,swidth,sheight,x,y,width,height)`
+
+sx:剪裁的x坐标；sy:剪裁的y坐标;swidth:剪裁的宽度;sheight:剪裁的高度
+
+其实图像操作还涉及到若干内容，包括对像素、色彩的调控等等，以后等把色彩原理、图像理论学扎实了再来研究一下。
+
+###像素操作(Pixel manipulation)
+
+下面我们通过像素操作来绘制一幅图像，代码如下：
+
+    var ctx = document.getElementById("myca").getContext('2d');
+	var imgData=ctx.createImageData(100,100);
+    for (var i=0;i<imgData.data.length;i+=4)
+    {
+     imgData.data[i+0]=128;
+     imgData.data[i+1]=128;
+     imgData.data[i+2]=128;
+     imgData.data[i+3]=128;
+    }
+    ctx.putImageData(imgData,10,10);
+
+效果图如下：
+
+<img src="/assets/images/h34.JPG" />
+
+上面的代码示例分别通过R、G、B、Alpha来进行对图像进行操作，这里涉及一些常用的色彩原理，可以去补充一下。
+
+我们还可以获得一个已经定义区域的像素内容，并进行相关像素操作，代码如下：
+
+    var ctx = document.getElementById("myca").getContext('2d');
+	var imgData=ctx.createImageData(100,100);
+    for (var i=0;i<imgData.data.length;i+=4)
+    {
+      imgData.data[i+0]=128;
+      imgData.data[i+1]=128;
+      imgData.data[i+2]=128;
+      imgData.data[i+3]=128;
+    }
+    ctx.putImageData(imgData,10,10);
+    var icopy = ctx.getImageData(10,10,100,100);
+    for (var i=0;i<icopy.data.length;i+=4)
+    {
+      icopy.data[i+0]=256;
+      icopy.data[i+1]=0;
+      icopy.data[i+2]=0;
+      icopy.data[i+3]=128;
+    }
+    ctx.putImageData(icopy,20,20);
+
+效果图如下：
+
+<img src="/assets/images/h35.JPG" />
+
+其实HTML5还涉及到很多内容，可以去官网上去看一下具体的怎样来做。但是在学习的过程中，我发现，html5中涉及到如何解析你写的东西，包括如何在底层将这些效果渲染出来，我觉得这才是真正学习好一门知识或者语言的思考方式。
 
 (完)
 
@@ -526,7 +625,11 @@ js方法说明：
 
 1、[W3C官方学习网站--html5部分](http://www.w3school.com.cn/tags/html_ref_canvas.asp)
 
-2、[W3C HTML5 2D Canvas标准]()
+2、[W3C HTML5 2D Canvas标准](http://www.w3.org/html/wg/drafts/2dcontext/html5_canvas_CR/#pixel-manipulation)
+
+3、[Canvas API](http://javascript.ruanyifeng.com/htmlapi/canvas.html)
+
+4、[HTML5 web开发指南](https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/HTML5)
 
 
 
