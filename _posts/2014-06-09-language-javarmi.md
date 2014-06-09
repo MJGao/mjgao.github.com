@@ -6,7 +6,7 @@ category: java
 tags: [java]
 ---
 
-RMI应该算是比较老的概念了，很多人都喜欢将它与SOA、JMS等进行比较与说明。我之前也接触过这个，看Tomcat源码教程的时候也知道了有个叫JMS的东西，后来就顺势知道了这些。
+RMI应该算是比较老的概念了，很多人都喜欢将它与SOA、JMS等进行比较与说明。想知道这些概念的区别的可以看[有没有哪位能完整解释一下soap RMI RPC WebService REST CORBA JMS这几者的区别和联系？](http://www.zhihu.com/question/20079608)这篇文章。
 
 这篇文章，简单讲述了一下什么是RMI，它有什么作用，我们应该如何使用RMI。我觉得只要掌握了这三点，简单入门应该算不成问题了，而之后的进阶我觉得可以去看相关框架中的应用，例如Spring中对RMI的运用等。
 
