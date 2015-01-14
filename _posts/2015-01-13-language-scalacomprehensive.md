@@ -18,89 +18,82 @@ tags: [scala]
 
 >>>十六进制
 
->>>val hex = 0x1 --->hex :Int = 22
+>>>     val hex = 0x1 --->hex :Int = 22
 
 >>>八进制
 
->>>val oct = 011 --->oct :Int  = 9
+>>>     val oct = 011 --->oct :Int  = 9
 
 >>如果整数字面量结束于L或者l，那么其就是Long类型。
 
->>>val lvalue = 11L --->lvalue :Long = 11
+>>>     val lvalue = 11L --->lvalue :Long = 11
 
 >>通过上面例子的输出结果我们看到不同于java这些语言，我们并没有给变量定义类型，但是编译器自动为我们推导出了类型，假如我们想定义一个Short类型的，那么可以这么做：
 
->>>val sValue : Short = 10 --->sValue :Short = 10
+>>>     val sValue : Short = 10 --->sValue :Short = 10
 
 >>*****浮点数字面量*****
 
 >>浮点数字面量是由十进制、可选的小数点、可选的E或者e以及相应的指数部分组成，看几个例子：
 
->>>val fv = 2.212 --->fv :Double = 2.212
-
->>>val feV = 2.11121e2 --->feV :Double = 211.121
+>>>     val fv = 2.212 --->fv :Double = 2.212
+>>>     val feV = 2.11121e2 --->feV :Double = 211.121
 
 >>以上我们看到类型会自动转为Double类型，那么我们怎么定义一个Float类型呢？看下面的例子：
 
->>>val fV = 2.1212F  --->fV :Float  = 2.1212
-
->>>val sFV = 10e5F --->sFV :Float = 1000000.0
+>>>     val fV = 2.1212F  --->fV :Float  = 2.1212
+>>>     val sFV = 10e5F --->sFV :Float = 1000000.0
 
 >>假如在定义浮点数数的时候后面加了f或者F则为Float类型，否则为Double类型。
 
 >>*****字符字面量*****
 
->>>val cV = 'B' --->cV :Char = B
-
->>>val cUV = '\45'--->cUV :Char = x
+>>>     val cV = 'B' --->cV :Char = B
+>>>     val cUV = '\45'--->cUV :Char = x
 
 >>我们还可以这样写
 
->>>val A\u0045\u0046 = 10f --->AEF :Float = 10.0
+>>>     val A\u0045\u0046 = 10f --->AEF :Float = 10.0
 
 >>即unicode编码可以出现在任何位置。
 
 >>*****字符串字面量*****
 
->>>val s = "Hello WOrld" --->s :String  = Hello World
+>>>     val s = "Hello WOrld" --->s :String  = Hello World
 
 >>>只要以双引号("")括起来就行了。
 
 >>在scala中还有一种特殊的符号，三引号(""")，看一下具体使用方式。
 
->>>println("""Hello World,My name is scala, 
-
->>>  nice to meet you.""")
+>>>     println("""Hello World,My name is scala, 
+>>>     nice to meet you.""")
 
 >>我们可以看到输出的字符串并没有对齐，那么你可以这样写：
 
->>>println("""|Hello World,My name is scala,
-
->>>  |nice to meet you.""")
+>>>     println("""|Hello World,My name is scala,
+>>>     |nice to meet you.""")
 
 >>>就是在每个句子的前面加一个(|)管道符，这个我们在linux指令中是经常看到的。
 
 >>*****布尔型字面量*****
 
->>>val bool = true --->bool :Boolean  = true
+>>>     val bool = true --->bool :Boolean  = true
 
->>*****符号字面量******
+>>*****符号字面量*****
 
->>>val symble = 'mjgao --->symble :Symbol = 'mjgao
-
->>>symble.name --->res2 :String = mjgao
+>>>     val symble = 'mjgao --->symble :Symbol = 'mjgao
+>>>     symble.name --->res2 :String = mjgao
 
 >****2、操作符和方法****
 
 >>这里我就举几个简单的例子来展示一下，毕竟想穷举下来确实需要费很多力气与时间。
 
->>>val k = 1+1 --->k :Int = 2
+>>>     val k = 1+1 --->k :Int = 2
 
->>>val kk = (1).+(1) --->kk :Int = 2
+>>>     val kk = (1).+(1) --->kk :Int = 2
+>>>     val str = "Hello World" --->str :String = Hello World
 
->>>val str = "Hello World" --->str :String = Hello World
-
->>>val strL = "Hello World" length --->strL :Int = 11
+>>>     val strL = "Hello World" length --->strL :Int = 11
 
 >>其实在scala中操作符就是方法，而像上面字符串的那种写法也是方法的一种调用方式，只是写的时候省略了(.)号，但是编译器会自动地进行编译。
 
@@ -110,7 +103,7 @@ tags: [scala]
 
 >>下面看几个函数的例子
 
->>>def insert(name:String,psw:String) = println("name:"+name+",psw:"+psw)
+>>>     def insert(name:String,psw:String) = println("name:"+name+",psw:"+psw)
 
 >>>输出为：insert(name:String,psw:String)Unit
 
@@ -163,23 +156,23 @@ tags: [scala]
 
 >>看一个关于过滤的例子
 
->>>    for(l <- List(1,2,3,4,5,6) if l>3)
->>>       println(l)
+>>>     for(l <- List(1,2,3,4,5,6) if l>3)
+>>>        println(l)
 >>>     输出结果为：4 5 6
 
 >>还可以使用`yield`来记住每个关键字
 
->>>    for {
+>>>     for {
 >>>        l <- List(1,2,3,5)
 >>>        if i>1
->>>    }yield i
->>>    输出结果为：res: List[Int] = list(2,3,5)
+>>>     }yield i
+>>>     输出结果为：res: List[Int] = list(2,3,5)
 
 是不是感觉scala确实是灵活多变的一门语言。
 
 大体上就写这么多了，再写的话还会涉及到很多引申的话题，这些都是一些基本的知识，说实话在写的过程中也确实挺累的，毕竟都是一些老生常谈的话题，但是只有把握好这些基础的，才可以进入下一个阶段。   
 
----------EOF---------------
+-----------EOF---------------
 
 
 
