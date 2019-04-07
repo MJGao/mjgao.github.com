@@ -36,7 +36,7 @@ comments: no
 >>个人邮箱: [ecgaoxiang@gmail.com](mailto:ecgaoxiang@gmail.com)     
 >>新浪微博: 一个我媳妇打死我也不会告诉的号	 
 >>豆瓣(豆瓣死粉，可能一天在豆瓣比在微信的次数还多)：[MJGao](http://www.douban.com/people/84894352/)    
->>github：[MJGao](https://github.com/mjgao) 
+>>github：[MJGao](https://github.com/mjgao)
 >>知乎：X乎上的人均收入太高，我已经没脸在混在上面了      
 
 ----
