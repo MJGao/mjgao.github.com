@@ -8,9 +8,6 @@ comments: no
    >>上善若水，水善利万物而不争
    >
 
->工作经历
-   >>做过前端，写过后端，最近两年开始瞎折腾分布式相关。前几年一直瞎操心大家的生命与健康保障(寿险)，最近一直乱担心大家的出行玩乐是否方便(旅游出行)，啊哈哈哈。最近两年给自己立了一个目标：一个不去思考产品的程序员，做不了一名合格的架构师。
-
 >爱好：
    >>无。(这种一写上就容易被打脸的事情我从来不太敢去做)
    >
@@ -33,10 +30,10 @@ comments: no
 
 >###联系方式：        
 
->>个人邮箱: [ecgaoxiang@gmail.com](mailto:ecgaoxiang@gmail.com)     
+>>个人邮箱: [ecgaoxiang@126.com](mailto:ecgaoxiang@126.com)     
 >>新浪微博: 一个我媳妇打死我也不会告诉的号	 
->>豆瓣(豆瓣死粉，可能一天在豆瓣比在微信的次数还多)：[MJGao](http://www.douban.com/people/84894352/)    
->>github：[MJGao](https://github.com/mjgao)
+>>豆瓣(豆瓣死粉，可能一天在豆瓣比在微信的次数还多)：[Goal](http://www.douban.com/people/84894352/)    
+>>github：[Goal](https://github.com/mjgao)  
 >>知乎：X乎上的人均收入太高，我已经没脸在混在上面了      
 
 ----
